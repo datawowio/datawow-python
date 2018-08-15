@@ -1,5 +1,5 @@
 # Datawow-python
-Datawow-python is rest library for python version. 
+HTTP RESTFul for calling DataWow APIs 
 ###### support or question support@datawow.io
 
 # Installation 
