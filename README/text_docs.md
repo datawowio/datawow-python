@@ -55,7 +55,7 @@ Description: Classify conversation
 
 
 # Common function 
-For every class there common function to get list of data and find by ID which we've going to show you how to use is.
+For every classes there are common functions to get list of data and find by ID. We've going to show you how to use it.
 
 ## Query list of data by  `list()`
 

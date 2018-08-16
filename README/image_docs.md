@@ -86,6 +86,8 @@ Description: Tag an object in the image
 |custom_id|string|No|Custom ID that used for search|
 
 
+# Common function
+For every classes there are common functions to get list of data and find by ID. We've going to show you how to use it.
 
 ## Query list of data by  `list()`
 
