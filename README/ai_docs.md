@@ -29,94 +29,7 @@
 | postback_method     | 	string | No |Postback method|
 | custom_id	     | string      |   No |Custom's id|
 
-##### response 
-```python
 
-print(result.data)
-
-"""
-{
-  'image': {'answer': None,
-  'credit_charged': 0,
-  'custom_id': None,
-  'data': 'Image URL',
-  'id': '5b72a19c5a5e4318c0f990f3',
-  'postback_url': 'http://localhost:3000/callbacks',
-  'processed_at': None,
-  'project_id': 143,
-  'staff_id': None,
-  'status': 'nanameue'}
-}
-"""
-```
-
-### Retrieve list of prediction
-You can retrieve data by use same object of connector that you have been created with you project key
-
-```python 
->>> from datawow.predictions import Predictor as predict
->>> result = predict("PROJECT KEY").list()
-```
-#### params
-| Field        | Type           | Required  | Description |
-| ------------- |:-------------:| :-----:| :-----|
-| page     | 	interger | No | default 0|
-| per_page 	     | string      | No | default 20 |
-
-
-#### response 
-```python
-print(result.data)
-
-"""
-{
-   'images': [{'answer': None,
-   'credit_charged': 0,
-   'custom_id': None,
-   'data': 'image URL',
-   'id': '5b72a19c5a5e4318c0f990f3',
-   'postback_url': 'http://localhost:3000/callbacks',
-   'processed_at': None,
-   'project_id': 143,
-   'staff_id': None,
-   'status': 'nanameue'},
-   {...}, 
-   {...}]
-}
-"""
-```
-
-### Retrieve data by ID
-all module of images is use same function to retrieve data with ID  
-```python
->>> from datawow.predictions import Predictor as predict
->>> result = predict("PROJECT KEY").find_id("YOUR IMAGE ID")
-```
-#### params
-| Field        | Type           | Required  | Description |
-| ------------- |:-------------:| :----:| :-----|
-| image_id | string  | **Yes** | Image's ID or custom ID which is you were assigned|
-
-#### response 
-
-```python
-print(result.data)
-
-"""
-{
-  'image': {'answer': None,
-  'credit_charged': 0,
-  'custom_id': None,
-  'data': 'image URL',
-  'id': '5b72a19c5a5e4318c0f990f3',
-  'postback_url': 'http://localhost:3000/callbacks',
-  'processed_at': None,
-  'project_id': 143,
-  'staff_id': None,
-  'status': 'nanameue'}
-}
-"""
-```
 
 ### Response of each type AI
 There are a difference type of response AI module here is a compare response of each
@@ -196,3 +109,31 @@ There are a difference type of response AI module here is a compare response of 
 }
 """
 ```
+
+
+
+# Common function 
+For every class there common function to get list of data and find by ID which we've going to show you how to use is.
+
+## Query list of data by  `list()`
+
+```python 
+>>> from datawow.[some_model] import [the_model] as model
+>>> result = model("PROJECT KEY").list()
+```
+#### params
+| Field        | Type           | Required  | Description |
+| ------------- |:-------------:| :-----:| :-----|
+| page     | 	interger | No | default 0|
+| per_page 	     | string      | No | default 20 |
+
+
+## Find data with ID by  `find_id()`
+```python
+>>> from datawow.[some_model] import [the_model] as model
+>>> result = model("PROJECT KEY").find_id("YOUR IMAGE ID")
+```
+#### params
+| Field        | Type           | Required  | Description |
+| ------------- |:-------------:| :----:| :-----|
+| image_id	     | string  |   **Yes** | Image's ID or custom ID which is you were assigned|

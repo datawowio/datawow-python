@@ -23,92 +23,29 @@ Description: Video classification
 | postback_method     | 	string | No |Configuration HTTP method GET POST PUT PATCH|
 | custom_id	     | string      |   No |Custom ID that used for search|
 
-#### response
-```python
- print(result.data)
- 
-"""
-{
-  'allow_seeking': True,
-  'answer': None,
-  'credit_charged': 0,
-  'custom_id': None,
-  'data': 'Video URL',
-  'id': '5b72ad495a5e43286f5a0af3',
-  'muted': True,
-  'play_at': 0.0,
-  'postback_url': 'http://localhost:3000/callbacks',
-  'processed_at': None,
-  'project_id': 144,
-  'status': 'unprocess'
-}
- """
-```
 
-### Retrieve list of data
+# Common function 
+For every class there common function to get list of data and find by ID which we've going to show you how to use is.
+
+## Query list of data by  `list()`
 
 ```python 
->>> from datawow.videos import VideoClassify as video
->>> result = closed('PROJECT KEY').list()
+>>> from datawow.[some_model] import [the_model] as model
+>>> result = model("PROJECT KEY").list()
 ```
 #### params
 | Field        | Type           | Required  | Description |
 | ------------- |:-------------:| :-----:| :-----|
-| page     | 	integer | No | default 0|
+| page     | 	interger | No | default 0|
 | per_page 	     | string      | No | default 20 |
 
+
+## Find data with ID by  `find_id()`
 ```python
-print(result.data)
-
-"""
-{
-   'videos': [{'allow_seeking': True,
-   'answer': None,
-   'credit_charged': 0,
-   'custom_id': None,
-   'data': 'Video URL',
-   'id': '5b72ad495a5e43286f5a0af3',
-   'muted': True,
-   'play_at': 0.0,
-   'postback_url': 'http://localhost:3000/callbacks',
-   'processed_at': None,
-   'project_id': 144,
-   'status': 'unprocess'},
-   {...},
-   {...}]
-}
- """
-```
-
-### Retrieve data by ID of video
-
-```python
->>> from datawow.videos import VideoClassify as video
->>> result = closed("PROJECT KEY").find_id("YOUR VIDEO ID")
+>>> from datawow.[some_model] import [the_model] as model
+>>> result = model("PROJECT KEY").find_id("YOUR IMAGE ID")
 ```
 #### params
 | Field        | Type           | Required  | Description |
 | ------------- |:-------------:| :----:| :-----|
-| video_id	     | string  |   **Yes** | Video's ID or custom ID which is you were assigned|
-
-#### response
-```python
-print(result.data)
-
-"""
-{
-  'video': {'allow_seeking': True,
-  'answer': None,
-  'credit_charged': 0,
-  'custom_id': None,
-  'data': 'Video URL',
-  'id': '5b72ad495a5e43286f5a0af3',
-  'muted': True,
-  'play_at': 0.0,
-  'postback_url': 'http://localhost:3000/callbacks',
-  'processed_at': None,
-  'project_id': 144,
-  'status': 'unprocess'}
-}
-"""
-```
+| image_id	     | string  |   **Yes** | Image's ID or custom ID which is you were assigned|
