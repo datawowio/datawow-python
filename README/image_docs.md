@@ -87,7 +87,7 @@ Description: Tag an object in the image
 
 
 # Common function
-For every classes there are common functions to get list of data and find by ID. We've going to show you how to use it.
+For every classes there are common functions to get list of data and find by ID. We're going to show you how to use it.
 
 ## Query list of data by  `list()`
 
