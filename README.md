@@ -11,13 +11,13 @@ or
 pip2 install datawow
 ```
 
-Python supports the following Python versions:
+The library has supports following version of python:
 
 * Python 2.7 tested
 * Python 3.5 tested
 * Python 3.6 tested  
 
-**Recommendation:**  We've created virtual-env for Python 3.5 on development process, thus recommended to use Python version 3.5 or later. 
+**Recommendation:**  We've created virtual-env for Python 3.5 on development process, thus we recommended to use Python version 3.5 or later. 
 
 For user who use **conda**, we haven't contribute yet
 
@@ -29,7 +29,7 @@ For user who use **conda**, we haven't contribute yet
 ```python
 >>> import datawow as ks
 ```
- There are 4 modules for API that you can specific the module as your expected 
+ There are 4 modules for API that you can import into your system
  
 1. Image API module
 ```python
@@ -53,7 +53,7 @@ For user who use **conda**, we haven't contribute yet
 
 ## Functions explanation 
 ### `datawow.images` module
-In the image module, we have 4 APIs
+In the image module, there are 4 APIs
 
 ```python
 >>> ks.Choice()
@@ -63,14 +63,14 @@ In the image module, we have 4 APIs
 ``` 
 ---
 ### `datawow.videos` module
-In the video module, we have 1 APIs
+In the video module, there are 1 APIs
 
 ```python
 >>> ks.VideoClassify()
 ``` 
 ---
 ### `datawow.texts` module
-In the text module, we have 3 APIs
+In the text module, there are 3 APIs
 
 ```python
 >>> ks.CategoryClassify()
@@ -79,7 +79,7 @@ In the text module, we have 3 APIs
 ``` 
 ---
 ### `datawow.predictions` module
-In the prediction module, we have 1 APIs
+In the prediction module, there are 1 APIs
 
 ```python
 >>> ks.Predictor()
@@ -94,12 +94,11 @@ In the prediction module, we have 1 APIs
 
 ## Working with response
 ### `datawow.responses` module
-To get response that data has been contained in response class you can call them by name for example
+To use response which is data has been contained in `response` class and you can use dot operation to get you data 
+
 ```python 
 >>> result.data
 ```
-Data it's Dict you can do as you want like a JSON object
-
 For check error or status by calling this 
 
 ```python 
@@ -107,13 +106,13 @@ For check error or status by calling this
 >>> result.message # Not authenticated
 ```
 
-also you can get HTTP success by this
+also you can check HTTP success by following
 
 ```python 
 >>> result.code # 200
 ```
 
-To get meta data such as pagination
+To use meta data such as pagination
 
 ```python 
 >>> result.meta # {'code': 200, 'message': 'success'}

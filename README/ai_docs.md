@@ -32,7 +32,7 @@
 
 
 ### Response of each type AI
-There are a difference type of response AI module here is a compare response of each
+There are a difference type of response AI module.
 #### Standard Criteria
 ```python 
 """
