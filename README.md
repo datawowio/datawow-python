@@ -17,7 +17,7 @@ The library has supports following version of python:
 * Python 3.5 tested
 * Python 3.6 tested  
 
-**Recommendation:**  We've created virtual-env for Python 3.5 on development process, thus we recommended to use Python version 3.5 or later. 
+**Recommendation:**  We've created virtual-env for Python 3.5 on development process, thus we recommended to use Python version 3.5 or above. 
 
 For user who use **conda**, we haven't contribute yet
 
