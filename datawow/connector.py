@@ -9,9 +9,9 @@ from datawow import responses
 
 class Connector(object):
 
-    def __init__(self, project_key=None, headers=None, base_url=None, model_type=None, model_class=None):
+    def __init__(self, project_key=None, headers=None, base_url=None, model_type=None, path=None):
 
-        if model_type is None or model_class is None:
+        if model_type is None or path is None:
             raise AttributeError('Missing class and model')
 
         if project_key is None:
@@ -24,7 +24,6 @@ class Connector(object):
 
         self.headers = self._build_header(headers)
 
-        path = base_config.path(model_type, model_class)
         base_url = base_config.base_url(model_type)
 
         if path == 'Not found' or base_url == 'Not found':
