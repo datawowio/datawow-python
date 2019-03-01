@@ -20,7 +20,7 @@ class ClosedQuestion():
 
         """
 
-        return Connector(self.token, model_type='texts', path='/api/v1/text/text_closed_questions').send(method='POST', data=params)
+        return Connector(self.token, model_type='texts', path='text/text_closed_questions').send(method='POST', data=params)
 
     def list(self, params=None):
         """Retrieve list of text
@@ -34,7 +34,7 @@ class ClosedQuestion():
 
          """
 
-        return Connector(self.token, model_type='texts', path='/api/v1/text/text_closed_questions').send(method='GET', data=params)
+        return Connector(self.token, model_type='texts', path='text/text_closed_questions').send(method='GET', data=params)
 
     def find_id(self, text_id=None):
         """Retrieve text by ID or custom ID
@@ -49,6 +49,6 @@ class ClosedQuestion():
 
         return Connector(self.token,
                          model_type='texts',
-                         path='/api/v1/text/text_closed_questions').send(method='GET',
+                         path='text/text_closed_questions').send(method='GET',
                                                               doc_id=text_id,
                                                               query_str=True)

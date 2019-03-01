@@ -7,7 +7,7 @@ except ImportError:
 
 setup(
     name='DataWow',
-    version='0.0.1',
+    version='0.1.0',
     description='HTTP RESTFul for calling DataWow APIs',
     url='https://datawow.io',
     author='Datawow.io',

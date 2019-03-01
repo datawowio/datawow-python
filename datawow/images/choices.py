@@ -23,7 +23,7 @@ class Choice():
             dict: The value containt in Response class as dict
 
         """
-        return Connector(self.token, model_type="images", path="/api/images/choices").send(
+        return Connector(self.token, model_type="images", path="images/choices").send(
             method='POST',
             data=params)
 
@@ -39,7 +39,7 @@ class Choice():
 
          """
 
-        return Connector(self.token, model_type="images", path="/api/images/choices").send(
+        return Connector(self.token, model_type="images", path="images/choices").send(
             method='GET',
             data=params)
 
