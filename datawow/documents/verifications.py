@@ -25,7 +25,7 @@ class Verification():
             data=params)
 
     def list(self, params=None):
-        """Retrieve list of image choices
+        """Retrieve list of image
 
         Args:
             page (int): Page of data
