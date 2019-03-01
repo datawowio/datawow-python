@@ -20,7 +20,7 @@ class Message():
             dict: The value containt in Response class as dict
 
         """
-        return Connector(self.token, model_type="images", path="/api/images/messages").send(
+        return Connector(self.token, model_type="images", path="images/messages").send(
             method='POST',
             data=params)
 
@@ -36,7 +36,7 @@ class Message():
 
         """
 
-        return Connector(self.token, model_type="images", path="/api/images/messages").send(
+        return Connector(self.token, model_type="images", path="images/messages").send(
             method='GET',
             data=params)
 

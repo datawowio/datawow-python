@@ -23,7 +23,7 @@ class Conversation():
 
         headers = {'Content-Type': 'application/json'}
 
-        return Connector(self.token, model_type='texts', path='/api/v1/text/text_conversations', headers=headers).send(method='POST', data=params)
+        return Connector(self.token, model_type='texts', path='text/text_conversations', headers=headers).send(method='POST', data=params)
 
     def list(self, params=None):
         """Retrieve list of conversation
@@ -37,7 +37,7 @@ class Conversation():
 
          """
 
-        return Connector(self.token, model_type='texts', path='/api/v1/text/text_conversations').send(method='GET', data=params)
+        return Connector(self.token, model_type='texts', path='text/text_conversations').send(method='GET', data=params)
 
     def find_id(self, text_id=None):
         """Retrieve conversation by ID or custom ID
@@ -52,6 +52,6 @@ class Conversation():
 
         return Connector(self.token,
                          model_type='texts',
-                         path='/api/v1/text/text_conversations').send(method='GET',
+                         path='text/text_conversations').send(method='GET',
                                                            doc_id=text_id,
                                                            query_str=True)

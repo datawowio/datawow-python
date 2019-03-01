@@ -20,7 +20,7 @@ class ClosedQuestion():
 
         """
 
-        return Connector(self.token, model_type="images", path="/api/images/closed_questions").send(
+        return Connector(self.token, model_type="images", path="images/closed_questions").send(
             method='POST',
             data=params)
 
@@ -36,7 +36,7 @@ class ClosedQuestion():
 
          """
 
-        return Connector(self.token, model_type="images", path="/api/images/closed_questions").send(
+        return Connector(self.token, model_type="images", path="images/closed_questions").send(
             method='GET',
             data=params)
 
