@@ -18,7 +18,7 @@ class Verification():
             dict: The value containt in Response class as dict
 
         """
-        return Connector(self.token, model_type="docs", path="/v1/images/document_verifications/").send(
+        return Connector(self.token, model_type="docs", path="images/document_verifications/").send(
             method='POST',
             data=params)
 
@@ -34,7 +34,7 @@ class Verification():
 
          """
 
-        return Connector(self.token, model_type="docs", path="/v1/images/document_verifications/").send(
+        return Connector(self.token, model_type="docs", path="images/document_verifications/").send(
             method='GET',
             data=params)
 
@@ -48,6 +48,6 @@ class Verification():
 
         """
 
-        return Connector(self.token, model_type="docs", path="/v1/images/document_verifications/").send(
+        return Connector(self.token, model_type="docs", path="images/document_verifications/").send(
             method='GET',
             doc_id=image_id)
