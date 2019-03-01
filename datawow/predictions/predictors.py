@@ -19,7 +19,7 @@ class Predictor():
             dict: The value containt in Response class as dict
 
         """
-        return Connector(self.token, model_type="ai", path="prime/predictions").send(
+        return Connector(self.token, model_type="ai", path="prime/predictions/").send(
             method='POST',
             data=params)
 
@@ -35,7 +35,7 @@ class Predictor():
 
          """
 
-        return Connector(self.token, model_type="ai", path="prime/predictions").send(
+        return Connector(self.token, model_type="ai", path="prime/predictions/").send(
             method='GET',
             data=params)
 
@@ -49,6 +49,6 @@ class Predictor():
             dict: The value containt in Response class as dict
 
         """
-        return Connector(self.token, model_type="ai", path="projects/images").send(
+        return Connector(self.token, model_type="ai", path="projects/images/").send(
             method='GET',
             doc_id=image_id)

@@ -20,7 +20,7 @@ class PhotoTag():
             dict: The value containt in Response class as dict
 
         """
-        return Connector(self.token, model_type="images", path="images/photo_tags").send(
+        return Connector(self.token, model_type="images", path="images/photo_tags/").send(
             method='POST',
             data=params)
 
@@ -35,7 +35,7 @@ class PhotoTag():
             dict: The value containt in Response class as dict
 
         """
-        return Connector(self.token, model_type="images", path="images/photo_tags").send(
+        return Connector(self.token, model_type="images", path="images/photo_tags/").send(
             method='GET',
             data=params)
 
@@ -49,6 +49,6 @@ class PhotoTag():
             dict: The value containt in Response class as dict
 
         """
-        return Connector(self.token, model_type="images", path="projects/images").send(
+        return Connector(self.token, model_type="images", path="projects/images/").send(
             method='GET',
             doc_id=image_id)

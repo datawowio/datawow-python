@@ -23,7 +23,7 @@ class VideoClassify():
 
         """
 
-        return Connector(self.token, model_type="videos", path="videos/closed_questions").send(
+        return Connector(self.token, model_type="videos", path="videos/closed_questions/").send(
             method='POST',
             data=params)
 
@@ -39,7 +39,7 @@ class VideoClassify():
 
          """
 
-        return Connector(self.token, model_type="videos", path="videos/closed_questions").send(
+        return Connector(self.token, model_type="videos", path="videos/closed_questions/").send(
             method='GET',
             data=params)
 
@@ -54,6 +54,6 @@ class VideoClassify():
 
         """
 
-        return Connector(self.token, model_type="videos", path="videos/closed_questions").send(
+        return Connector(self.token, model_type="videos", path="videos/closed_questions/").send(
             method='GET',
             doc_id=video_id)
