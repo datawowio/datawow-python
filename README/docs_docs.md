@@ -46,4 +46,4 @@ For every classes there are common functions to get list of data and find by ID.
 #### params
 | Field        | Type           | Required  | Description |
 | ------------- |:-------------:| :----:| :-----|
-| image_id	     | string  |   **Yes** | Image's ID or custom ID which is you were assigned|
+| doc_id	     | string  |   **Yes** | Image's ID or custom ID which is you were assigned|

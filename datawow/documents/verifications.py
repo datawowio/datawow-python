@@ -18,7 +18,9 @@ class Verification():
             dict: The value containt in Response class as dict
 
         """
-        return Connector(self.token, model_type="docs", path="images/document_verifications/").send(
+        return Connector(self.token, model_type="docs",
+                         path="images/document_verifications/",
+                         headers={'Content-Type': 'application/json'}).send(
             method='POST',
             data=params)
 
@@ -38,7 +40,7 @@ class Verification():
             method='GET',
             data=params)
 
-    def find_id(self, image_id=None):
+    def find_id(self, doc_id=None):
         """Retrieve image by ID or custom ID
 
         Args:
@@ -50,4 +52,4 @@ class Verification():
 
         return Connector(self.token, model_type="docs", path="images/document_verifications/").send(
             method='GET',
-            doc_id=image_id)
+            doc_id=doc_id)
