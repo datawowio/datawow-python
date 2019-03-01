@@ -22,7 +22,7 @@ class CategoryClassify():
 
         """
         headers = {'Content-Type': 'application/json'}
-        return Connector(self.token, model_type='texts', path='text/text_categories', headers=headers).send(method='POST', data=params)
+        return Connector(self.token, model_type='texts', path='text/text_categories/', headers=headers).send(method='POST', data=params)
 
     def list(self, params=None):
         """Retrieve list of conversation
@@ -36,7 +36,7 @@ class CategoryClassify():
 
          """
 
-        return Connector(self.token, model_type='texts', path='text/text_categories').send(method='GET', data=params)
+        return Connector(self.token, model_type='texts', path='text/text_categories/').send(method='GET', data=params)
 
     def find_id(self, text_id=None):
         """Retrieve conversation by ID or custom ID
@@ -51,6 +51,6 @@ class CategoryClassify():
 
         return Connector(self.token,
                          model_type='texts',
-                         path='text/text_categories').send(method='GET',
+                         path='text/text_categories/').send(method='GET',
                                                         doc_id=text_id,
                                                         query_str=True)

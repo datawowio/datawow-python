@@ -20,7 +20,7 @@ class ClosedQuestion():
 
         """
 
-        return Connector(self.token, model_type="images", path="images/closed_questions").send(
+        return Connector(self.token, model_type="images", path="images/closed_questions/").send(
             method='POST',
             data=params)
 
@@ -36,7 +36,7 @@ class ClosedQuestion():
 
          """
 
-        return Connector(self.token, model_type="images", path="images/closed_questions").send(
+        return Connector(self.token, model_type="images", path="images/closed_questions/").send(
             method='GET',
             data=params)
 
@@ -51,6 +51,6 @@ class ClosedQuestion():
 
         """
 
-        return Connector(self.token, model_type="images", path="projects/images").send(
+        return Connector(self.token, model_type="images", path="projects/images/").send(
             method='GET',
             doc_id=image_id)
