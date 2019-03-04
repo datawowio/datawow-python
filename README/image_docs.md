@@ -85,6 +85,22 @@ Description: Tag an object in the image
 |postback_method|string | No |Configuration HTTP method GET POST PUT PATCH|
 |custom_id|string|No|Custom ID that used for search|
 
+## AI Consensus class
+Description: Find a confidential answer
+
+### Create
+```python
+>>> from datawow.images import AIConsensus as consensus
+>>> result = consensus("PROJECT KEY").create(params=param)
+```
+
+#### params
+| Field | Type| Required | Description |
+| ------------- |:-------------:| :-----:| :-----|
+|data|string| **Yes** |URL of image|
+|postback_url|string| No |URL for answer callback once image has been checked|
+|postback_method|string | No |Configuration HTTP method GET POST PUT PATCH|
+|custom_id|string|No|Custom ID that used for search|
 
 # Common function
 For every classes there are common functions to get list of data and find by ID. We're going to show you how to use it.
