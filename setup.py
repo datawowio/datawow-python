@@ -6,8 +6,8 @@ except ImportError:
     from distutils.core import setup
 
 setup(
-    name='DataWow',
-    version='0.1.0',
+    name='Datawow',
+    version='0.1.2',
     description='HTTP RESTFul for calling DataWow APIs',
     url='https://datawow.io',
     author='Datawow.io',

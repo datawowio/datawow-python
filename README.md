@@ -90,6 +90,7 @@ In the prediction module, there are 1 APIs
  - Video Documentation [link](README/video_docs.md)
  - Text Documentation [link](README/text_docs.md)
  - AI/Prediction Documentation [link](README/ai_docs.md)
+ - Document verification Documentation [link](README/docs_docs.md)
 
 
 ## Working with response
